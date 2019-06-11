@@ -1,0 +1,11 @@
+{
+  "name": "reunite-pets",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Sam Cook <samryancook@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "cd app && yarn build && yarn start && cd ../api && yarn start",
+    "dev": "cd app && yarn dev && cd ../api && docker-compose up && PORT=3001 yarn dev"
+  }
+}
