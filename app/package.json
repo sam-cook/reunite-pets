@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "nodemon server",
     "build": "next build",
-    "start": "NODE_ENV=production node server"
+    "start": "NODE_ENV=production node server",
+    "test": "jest"
   },
   "dependencies": {
     "apollo-boost": "^0.1.16",
@@ -19,5 +20,14 @@
     "react-dom": "^16.8.6"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "@testing-library/react": "^8.0.1",
+    "babel-jest": "^24.8.0",
+    "jest": "^24.8.0",
+    "react-test-renderer": "^16.8.6",
+    "waait": "^1.0.5"
+  }
 }

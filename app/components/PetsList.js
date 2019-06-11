@@ -27,11 +27,9 @@ export default function PetView() {
             <ul>
               {data.allPets.nodes.map(pet => (
                 <li key={pet.id}>
-                  <div>
-                    <a href={`/pets/${pet.id}`}>
-                      {pet.name} - {pet.breed}
-                    </a>
-                  </div>
+                  <a href={`/pets/${pet.id}`}>
+                    {pet.name} - {pet.breed}
+                  </a>
                 </li>
               ))}
             </ul>

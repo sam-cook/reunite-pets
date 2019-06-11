@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a component 1`] = `
+<section>
+  <h1>
+    Buck
+     - 
+    bulldog
+  </h1>
+</section>
+`;
