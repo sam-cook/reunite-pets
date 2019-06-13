@@ -1,0 +1,25 @@
+{
+  "env": {
+    "jest": true,
+    "node": true
+  },
+  "extends": ["airbnb-base", "prettier"],
+  "plugins": ["prettier"],
+  "rules": {
+    "forin": true,
+    "no-trailing-whitespace": [true],
+    "max-len": [
+      "error",
+      120,
+      2,
+      {
+        "ignoreUrls": true,
+        "ignoreComments": false,
+        "ignoreRegExpLiterals": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true
+      }
+    ],
+    "prettier/prettier": "error"
+  }
+}

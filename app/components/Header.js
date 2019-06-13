@@ -1,7 +1,6 @@
 import Link from "next/link";
-import { withRouter } from "next/router";
 
-const Header = ({ router: { pathname } }) => (
+const Header = () => (
   <header>
     <Link prefetch href="/">
       <a>Home</a>
@@ -9,17 +8,19 @@ const Header = ({ router: { pathname } }) => (
     <Link prefetch href="/pets">
       <a>Pets</a>
     </Link>
-    <style jsx>{`
-      header {
-        margin-bottom: 25px;
-      }
-      a {
-        font-size: 14px;
-        margin-right: 15px;
-        text-decoration: none;
-      }
-    `}</style>
+    <style jsx>
+      {`
+        header {
+          margin-bottom: 25px;
+        }
+        a {
+          font-size: 14px;
+          margin-right: 15px;
+          text-decoration: none;
+        }
+      `}
+    </style>
   </header>
 );
 
-export default withRouter(Header);
+export default Header;

@@ -1,9 +1,10 @@
 import React from "react";
 import { Query } from "react-apollo";
+import PropTypes from "prop-types";
 import ErrorMessage from "./ErrorMessage";
 import { petById } from "../lib/queries/pet";
 
-export default function PetView(props) {
+const PetView = props => {
   return (
     <Query query={petById} variables={{ id: props.id }}>
       {({ loading, error, data }) => {
@@ -13,11 +14,17 @@ export default function PetView(props) {
         return (
           <section>
             <h1>
-              {pet.name} - {pet.breed}
+              {pet.name} -{pet.breed}
             </h1>
           </section>
         );
       }}
     </Query>
   );
-}
+};
+
+PetView.propTypes = {
+  id: PropTypes.string.isRequired
+};
+
+export default PetView;

@@ -28,39 +28,41 @@ export default function PetView() {
               {data.allPets.nodes.map(pet => (
                 <li key={pet.id}>
                   <a href={`/pets/${pet.id}`}>
-                    {pet.name} - {pet.breed}
+                    {pet.name} -{pet.breed}
                   </a>
                 </li>
               ))}
             </ul>
-            <style jsx>{`
-              section {
-                padding-bottom: 20px;
-              }
-              li {
-                display: block;
-                margin-bottom: 10px;
-              }
-              div {
-                align-items: center;
-                display: flex;
-              }
-              a {
-                font-size: 14px;
-                margin-right: 10px;
-                text-decoration: none;
-                padding-bottom: 0;
-                border: 0;
-              }
-              span {
-                font-size: 14px;
-                margin-right: 5px;
-              }
-              ul {
-                margin: 0;
-                padding: 0;
-              }
-            `}</style>
+            <style jsx>
+              {`
+                section {
+                  padding-bottom: 20px;
+                }
+                li {
+                  display: block;
+                  margin-bottom: 10px;
+                }
+                div {
+                  align-items: center;
+                  display: flex;
+                }
+                a {
+                  font-size: 14px;
+                  margin-right: 10px;
+                  text-decoration: none;
+                  padding-bottom: 0;
+                  border: 0;
+                }
+                span {
+                  font-size: 14px;
+                  margin-right: 5px;
+                }
+                ul {
+                  margin: 0;
+                  padding: 0;
+                }
+              `}
+            </style>
           </section>
         );
       }}
