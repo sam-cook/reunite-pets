@@ -2,8 +2,9 @@ import { Query } from "react-apollo";
 import PropTypes from "prop-types";
 import { allPets } from "../lib/queries/pet";
 import ErrorMessage from "./ErrorMessage";
+import { PET_STATUS_TYPES } from "../lib/constants";
 
-const PetsList = ({ status = "LOST" }) => (
+const PetsList = ({ status = PET_STATUS_TYPES.LOST }) => (
   <Query
     query={allPets}
     variables={{

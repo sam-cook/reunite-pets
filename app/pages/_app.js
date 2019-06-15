@@ -12,7 +12,9 @@ class MyApp extends App {
       <Container>
         <ApolloProvider client={apolloClient}>
           <Header />
-          <Component {...pageProps} />
+          <section className="mw12 center pa3 ph5-ns">
+            <Component {...pageProps} />
+          </section>
         </ApolloProvider>
         <style jsx global>
           {`
