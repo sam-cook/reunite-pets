@@ -2,6 +2,6 @@ import PetsList from "../components/PetsList";
 
 export default () => (
   <>
-    <PetsList />
+    <PetsList status="FOUND" />
   </>
 );

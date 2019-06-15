@@ -7,6 +7,22 @@ export const petById = gql`
       breed
       name
       species
+      description
+      status
+    }
+  }
+`;
+
+export const allPets = gql`
+  query AllPets($condition: PetCondition) {
+    allPets(condition: $condition) {
+      nodes {
+        id
+        name
+        breed
+        species
+        status
+      }
     }
   }
 `;

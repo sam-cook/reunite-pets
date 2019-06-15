@@ -14,8 +14,9 @@ const PetView = props => {
         return (
           <section>
             <h1>
-              {pet.name} -{pet.breed}
+              {pet.name} - {pet.breed}
             </h1>
+            <p>{pet.description}</p>
           </section>
         );
       }}
