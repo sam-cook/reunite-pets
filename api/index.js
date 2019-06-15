@@ -8,12 +8,14 @@ const database = require("./database");
 
 const app = express();
 
+const postgresUrl = `postgres://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}`;
+
 database.sync().then(
   () => {
     app.use(bodyParser.json());
     app.use(cors());
     app.use(
-      postgraphile(process.env.POSTGRES_URL, "public", {
+      postgraphile(postgresUrl, "public", {
         graphiql: true,
         enhanceGraphiql: true
       })

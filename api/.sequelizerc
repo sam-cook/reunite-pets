@@ -1,0 +1,8 @@
+const path = require('path');
+
+const basePath = "database";
+
+module.exports = {
+  'config': path.resolve(basePath, 'config.js'),
+  'models-path': path.resolve(basePath, 'models')
+};
